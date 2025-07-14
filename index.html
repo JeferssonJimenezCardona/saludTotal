@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Kognia | Alan Charlie (Chat)</title>
+  <link rel="stylesheet" href="styles.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+  <header class="topbar">
+    <img src="logo.png" alt="Kognia Logo" class="logo"/>
+    <strong class="brand">KOGNIA</strong>
+  </header>
+
+  <aside class="sidebar">
+    <h3 class="client-name">Salud Total - QA (Preview)</h3>
+    <ul class="nav-list">
+      <li>📊 Dashboard cliente</li>
+      <li>👤 Perfil</li>
+      <li>👥 Usuarios del sistema</li>
+      <li>💳 Uso y facturación</li>
+      <li class="section-title">Alan Customer Experience</li>
+      <!-- <li class="nav-item"><span>💬</span> <a href="#" onclick="toggleChat(event)">Chats</a></li>-->
+      <li class="nav-item"><span>🧑</span> Chats</li>
+      <li class="nav-item"><span>🧑</span> Avatar</li>
+      <li class="nav-item"><span>🎙</span> Voicebots</li>
+      <li class="nav-item"><span>📈</span> CX Insights</li>
+      <li class="section-title">Alan Sense Comprehension</li>
+      <li class="nav-item"><span>🧠</span> Textify</li>
+      <li class="section-title">Alan General Purpose</li>
+       <!--<li class="nav-item"><span>🤖</span> Alan X</li>-->
+      <li class="nav-item"><span>💬</span> <a href="#" onclick="toggleChat(event)">Alan X</a></li>
+      <li>⚙ Configuración</li>
+    </ul>
+  </aside>
+
+  <main class="main-content">
+    <h2 class="modules-title">Alan Customer Experience - PREVIEW</h2>
+    <div class="modules-grid">
+      <!-- Tarjeta Activa -->
+      <div class="module-card active">
+        <div class="module-icon">💬</div>
+        <h3 class="module-title">ALAN X (CHAT)</h3>
+        <p class="module-desc">Atención al cliente en tiempo real potenciada con IA generativa para conversaciones fluidas, rápidas y eficientes</p>
+        <button class="module-btn" onclick="toggleChat(event)">Iniciar Agente</button>
+      </div>
+      <!-- Tarjetas Inactivas -->
+      <div class="module-card">
+        <div class="module-icon">🔊</div>
+        <h3 class="module-title">ALAN KIRA</h3>
+        <div class="module-placeholder"></div>
+      </div>
+      <div class="module-card">
+        <div class="module-icon">🎧</div>
+        <h3 class="module-title">ALAN VOXI</h3>
+        <div class="module-placeholder"></div>
+      </div>
+      <div class="module-card">
+        <div class="module-icon">📉</div>
+        <h3 class="module-title">CX INSIGHTS</h3>
+        <div class="module-placeholder"></div>
+      </div>
+    </div>
+  </main>
+
+  <div id="chat-panel" class="chat-overlay hidden">
+    <div class="chat-header">
+      <h2>Alan Customer Experience - PREVIEW</h2>
+      <button class="close-btn" onclick="toggleChat(event)">&times;</button>
+    </div>
+    <iframe
+      src="https://copilotstudio.microsoft.com/environments/Default-a8195a51-a3b6-4a79-b3ea-7031366f77d5/bots/cr65f_agente/webchat?__version__=2"
+      class="chat-iframe"
+      allow="microphone; camera; fullscreen"
+      sandbox="allow-scripts allow-same-origin allow-forms allow-popups"
+      loading="lazy"
+      referrerpolicy="no-referrer"
+    ></iframe>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
